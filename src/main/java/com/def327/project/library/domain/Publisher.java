@@ -26,7 +26,7 @@ import java.util.List;
 @DynamicInsert
 @SelectBeforeUpdate
 @Entity
-public class Publisher {
+public class Publisher extends AbstractBase{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

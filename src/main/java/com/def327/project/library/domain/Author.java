@@ -28,7 +28,7 @@ import java.util.List;
 @DynamicUpdate
 @DynamicInsert
 @SelectBeforeUpdate
-public class Author {
+public class Author extends AbstractBase {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

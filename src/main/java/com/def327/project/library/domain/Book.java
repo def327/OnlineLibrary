@@ -30,7 +30,7 @@ import java.math.BigInteger;
 @EqualsAndHashCode(of = "id")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Book {
+public class Book extends AbstractBase{
 
     public Book(BigInteger id, byte[] image) {
         this.id = id;

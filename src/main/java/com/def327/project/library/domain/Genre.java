@@ -25,7 +25,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-public class Genre {
+public class Genre extends AbstractBase{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

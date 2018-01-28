@@ -24,7 +24,7 @@ import java.util.Date;
 @DynamicUpdate
 @DynamicInsert
 @SelectBeforeUpdate
-public class Vote {
+public class Vote extends AbstractBase {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

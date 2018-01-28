@@ -1,8 +1,7 @@
 package com.def327.project.library.domain;
 
+import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SelectBeforeUpdate;
@@ -18,14 +17,13 @@ import javax.persistence.Table;
 import java.math.BigInteger;
 import java.util.List;
 
-@EqualsAndHashCode(of = "id")
+@Entity
 @Table(catalog = "library")
-@Getter
-@Setter
 @DynamicUpdate
 @DynamicInsert
 @SelectBeforeUpdate
-@Entity
+@Data
+@EqualsAndHashCode(of = "id")
 public class Publisher extends AbstractBase{
 
     @Id

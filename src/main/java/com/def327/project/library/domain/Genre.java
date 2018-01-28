@@ -1,8 +1,7 @@
 package com.def327.project.library.domain;
 
+import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SelectBeforeUpdate;
@@ -17,14 +16,13 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.List;
 
-@EqualsAndHashCode(of = "id")
+@Entity
 @Table(catalog = "library")
 @DynamicUpdate
 @DynamicInsert
 @SelectBeforeUpdate
-@Entity
-@Getter
-@Setter
+@Data
+@EqualsAndHashCode(of = "id")
 public class Genre extends AbstractBase{
 
     @Id

@@ -1,10 +1,7 @@
 package com.def327.project.library.domain;
 
-import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SelectBeforeUpdate;
@@ -20,16 +17,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.math.BigInteger;
 
+
 @Entity
 @Table(catalog = "library")
 @DynamicUpdate
 @DynamicInsert
 @SelectBeforeUpdate
-@Setter
-@Getter
+@Data
 @EqualsAndHashCode(of = "id")
-@NoArgsConstructor
-@AllArgsConstructor
 public class Book extends AbstractBase{
 
     public Book(BigInteger id, byte[] image) {

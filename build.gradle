@@ -46,6 +46,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security:+')
 	compile("org.springframework.boot:spring-boot-starter-actuator:+")
 	compile("org.springframework.boot:spring-boot-starter-aop:+")
+	compile("org.springframework.boot:spring-boot-starter-test:+")
 
 	compile 'org.projectlombok:lombok:+'
 	compile 'com.google.guava:guava:+'

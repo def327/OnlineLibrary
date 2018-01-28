@@ -1,8 +1,7 @@
 package com.def327.project.library.domain;
 
+import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SelectBeforeUpdate;
@@ -18,12 +17,11 @@ import java.util.Date;
 
 @Entity
 @Table(catalog = "library")
-@EqualsAndHashCode(of = "id")
-@Getter
-@Setter
 @DynamicUpdate
 @DynamicInsert
 @SelectBeforeUpdate
+@Data
+@EqualsAndHashCode(of = "id")
 public class Vote extends AbstractBase {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)

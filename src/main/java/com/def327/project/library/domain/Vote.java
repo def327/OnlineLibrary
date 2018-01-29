@@ -1,7 +1,7 @@
 package com.def327.project.library.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SelectBeforeUpdate;
@@ -20,13 +20,9 @@ import java.util.Date;
 @DynamicUpdate
 @DynamicInsert
 @SelectBeforeUpdate
-@Data
-@EqualsAndHashCode(of = "id")
+@Getter
+@Setter
 public class Vote extends AbstractBase {
-
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    private BigInteger id;
 
     private String value;
 

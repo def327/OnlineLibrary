@@ -1,16 +1,13 @@
 package com.def327.project.library.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SelectBeforeUpdate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
@@ -23,21 +20,9 @@ import java.math.BigInteger;
 @DynamicUpdate
 @DynamicInsert
 @SelectBeforeUpdate
-@Data
-@EqualsAndHashCode(of = "id")
+@Getter
+@Setter
 public class Book extends AbstractBase{
-
-    public Book(BigInteger id, byte[] image) {
-        this.id = id;
-        this.image = image;
-
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private BigInteger id;
-
-    private String name;
 
     @Lob
     @Column(updatable = false)
@@ -64,7 +49,6 @@ public class Book extends AbstractBase{
     @Column(name = "publish_year")
     private Integer publishYear;
 
-
     private byte[] image;
 
     private String descr;
@@ -80,9 +64,4 @@ public class Book extends AbstractBase{
 
     @Column(name = "avg_rating")
     private int avgRating;
-
-    @Override
-    public String toString() {
-        return name;
-    }
 }

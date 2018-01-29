@@ -1,7 +1,7 @@
 package com.def327.project.library.domain;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SelectBeforeUpdate;
@@ -21,22 +21,11 @@ import java.util.List;
 @DynamicUpdate
 @DynamicInsert
 @SelectBeforeUpdate
-@Data
-@EqualsAndHashCode(of = "id")
+@Getter
+@Setter
 public class Genre extends AbstractBase{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
 
     @Basic(fetch = FetchType.LAZY)
     @OneToMany(mappedBy = "genre")
     private List<Book> books;
-
-    @Override
-    public String toString() {
-        return name;
-    }
 }

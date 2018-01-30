@@ -1,8 +1,8 @@
-package com.def327.project.library.web.rest;
+package com.def327.project.library.test.rest;
 
-import com.def327.project.library.dao.AuthorDao;
-import com.def327.project.library.domain.Author;
-import com.def327.project.library.domain.Book;
+import com.def327.project.library.dao.service.AuthorService;
+import com.def327.project.library.dao.entities.Author;
+import com.def327.project.library.dao.entities.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ import java.util.List;
 public class TestDaoRest {
 
     @Autowired
-    private AuthorDao authorDao;
+    private AuthorService authorDao;
 
     @GetMapping("/authors/{id}")
     public ResponseEntity<String> getAuthor(@PathVariable(required = false) BigInteger id) {

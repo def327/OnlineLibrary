@@ -1,10 +1,10 @@
-package com.def327.project.library.dao.impl;
+package com.def327.project.library.dao.service.impl;
 
-import com.def327.project.library.dao.AuthorDao;
-import com.def327.project.library.domain.Author;
-import com.def327.project.library.repository.AuthorRepository;
+import com.def327.project.library.dao.service.AuthorService;
+import com.def327.project.library.dao.entities.Author;
+import com.def327.project.library.dao.repository.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -12,8 +12,8 @@ import java.util.List;
 /**
  * Created def327 on 1/28/18.
  */
-@Repository
-public class AuthorDaoImpl implements AuthorDao {
+@Service
+public class AuthorServiceImpl implements AuthorService {
 
     @Autowired
     private AuthorRepository authorRepository;
@@ -40,6 +40,8 @@ public class AuthorDaoImpl implements AuthorDao {
 
     @Override
     public List<Author> search(String... searchString) {
+        //TODO add util class for separation
+//        return authorRepository.findByFioContainingIgnoreCaseOrderByFio(searchString);
         return null;
     }
 }

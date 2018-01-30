@@ -1,6 +1,6 @@
-package com.def327.project.library.dao;
+package com.def327.project.library.dao.service;
 
-import com.def327.project.library.domain.AbstractBase;
+import com.def327.project.library.dao.entities.AbstractBase;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created def327 on 1/28/18.
  */
-public interface BaseDao<T extends AbstractBase> {
+public interface BaseService<T extends AbstractBase> {
 
     List<T> getAll();
 

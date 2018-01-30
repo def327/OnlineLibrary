@@ -1,4 +1,4 @@
-package com.def327.project.library.domain;
+package com.def327.project.library.dao.entities;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

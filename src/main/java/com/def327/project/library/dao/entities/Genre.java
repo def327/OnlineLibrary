@@ -1,4 +1,4 @@
-package com.def327.project.library.domain;
+package com.def327.project.library.dao.entities;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,9 +9,6 @@ import org.hibernate.annotations.SelectBeforeUpdate;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.def327.project.library.dao.service;
+package com.def327.project.library.api.service.data;
 
 import com.def327.project.library.dao.entities.Publisher;
 

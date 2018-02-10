@@ -41,6 +41,7 @@ configurations {
 }
 
 dependencies {
+//Spring
 	compile('org.springframework.boot:spring-boot-starter-data-jpa:+')
 	compile('org.springframework.boot:spring-boot-starter-web:+')
 	compile('org.springframework.boot:spring-boot-starter-security:+')
@@ -48,12 +49,19 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-starter-aop:+")
 	compile("org.springframework.boot:spring-boot-starter-test:+")
 
+//Third party libs
 	compile 'org.projectlombok:lombok:+'
 	compile 'com.google.guava:guava:+'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 
+//Database libs
 	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
 	compileOnly 'javax:javaee-api:7.0'
 }
+
+//Fix problem with encoding UTF-8
+compileJava.options.encoding = 'UTF-8'
+
 
 //Fix problem with class paths Gradle/Idea at application
 apply plugin: 'idea'

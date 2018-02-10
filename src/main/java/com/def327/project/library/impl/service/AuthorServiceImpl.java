@@ -1,12 +1,13 @@
-package com.def327.project.library.dao.service.impl;
+package com.def327.project.library.impl.service;
 
-import com.def327.project.library.dao.service.AuthorService;
+import com.def327.project.library.api.service.data.AuthorService;
 import com.def327.project.library.dao.entities.Author;
 import com.def327.project.library.dao.repository.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -40,8 +41,8 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public List<Author> search(String... searchString) {
-        //TODO add util class for separation
-//        return authorRepository.findByFioContainingIgnoreCaseOrderByFio(searchString);
-        return null;
+        //TODO refactor
+        String fio = Arrays.toString(searchString);
+        return authorRepository.findByNameContainingIgnoreCaseOrderByName(fio);
     }
 }

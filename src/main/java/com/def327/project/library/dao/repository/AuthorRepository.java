@@ -13,5 +13,5 @@ import java.util.List;
 @Repository
 public interface AuthorRepository extends JpaRepository<Author, BigInteger> {
 
-    List<Author> findByFioContainingIgnoreCaseOrderByFio(String fio);
+    List<Author> findByNameContainingIgnoreCaseOrderByName(String fio);
 }

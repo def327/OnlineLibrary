@@ -31,7 +31,6 @@ logging:
     file: logs/library_app.log
     pattern:
       file: "%d{HH:mm:ss} %-5p [%c] - %m%n"
-
     level:
         ROOT: error
         org.springframework: warn

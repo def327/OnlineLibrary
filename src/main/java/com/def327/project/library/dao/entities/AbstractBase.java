@@ -20,9 +20,9 @@ public abstract class AbstractBase implements Serializable {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private BigInteger id;
+    protected BigInteger id;
 
-    private String name;
+    protected String name;
 
     @Override
     public String toString() {

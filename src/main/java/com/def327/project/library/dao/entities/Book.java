@@ -1,6 +1,7 @@
 package com.def327.project.library.dao.entities;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -22,7 +23,45 @@ import java.math.BigInteger;
 @SelectBeforeUpdate
 @Getter
 @Setter
+@NoArgsConstructor
 public class Book extends AbstractBase{
+
+    //Without content
+    public Book(BigInteger id,
+                String name,
+                Integer pageCount,
+                String isbn,
+                Genre genre,
+                Author author,
+                Publisher publisher,
+                Integer publishYear,
+                byte[] image,
+                String descr,
+                BigInteger viewCount,
+                BigInteger totalRating,
+                BigInteger totalVoteCount,
+                int avgRating) {
+        this.id = id;
+        this.name = name;
+        this.pageCount = pageCount;
+        this.isbn = isbn;
+        this.genre = genre;
+        this.author = author;
+        this.publisher = publisher;
+        this.publishYear = publishYear;
+        this.image = image;
+        this.descr = descr;
+        this.viewCount = viewCount;
+        this.totalRating = totalRating;
+        this.totalVoteCount = totalVoteCount;
+        this.avgRating = avgRating;
+    }
+
+    //Only with image
+    public Book(BigInteger id, byte[] image) {
+        this.id = id;
+        this.image = image;
+    }
 
     @Lob
     @Column(updatable = false)
